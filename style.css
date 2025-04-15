@@ -33,7 +33,8 @@ h1 {
     font-weight: bold;
 }
 
-#player1-score, #player2-score {
+#player1-score,
+#player2-score {
     width: 80px;
     padding: 10px;
     margin: 0 20px;
@@ -89,11 +90,70 @@ canvas {
     transform: scale(0.98);
 }
 
+/* Estilos para seleção de modo de jogo */
+.game-mode {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.mode-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.mode-btn.active {
+    background-color: #FFC107;
+    color: #000;
+}
+
+/* Estilos para seleção de dificuldade */
+.difficulty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.difficulty p {
+    margin: 0 10px 0 0;
+}
+
+.difficulty-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    margin: 0 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.difficulty-btn.active {
+    background-color: #FFC107;
+    color: #000;
+}
+
 /* Animação para quando o jogo terminar */
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .winner-animation {

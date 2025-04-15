@@ -4,13 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo de Pong - 2 Jogadores</title>
+    <title>Jogo de Pong</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>Pong - 2 Jogadores</h1>
+        <h1>Pong</h1>
+        <div class="game-mode">
+            <button id="one-player-btn" class="mode-btn active">1 Jogador</button>
+            <button id="two-player-btn" class="mode-btn">2 Jogadores</button>
+        </div>
+        <div class="difficulty" id="difficulty-selector">
+            <p>Dificuldade:</p>
+            <button id="easy-btn" class="difficulty-btn active">Fácil</button>
+            <button id="medium-btn" class="difficulty-btn">Médio</button>
+            <button id="hard-btn" class="difficulty-btn">Difícil</button>
+        </div>
         <div class="score">
             <div id="player1-score">0</div>
             <div id="player2-score">0</div>
@@ -18,7 +28,7 @@
         <canvas id="pong" width="800" height="400"></canvas>
         <div class="controls">
             <p><strong>Jogador 1:</strong> W (cima) e S (baixo)</p>
-            <p><strong>Jogador 2:</strong> Seta para cima e Seta para baixo</p>
+            <p id="player2-controls"><strong>Jogador 2:</strong> Seta para cima e Seta para baixo</p>
             <button id="restart-btn">Reiniciar Jogo</button>
         </div>
     </div>
