@@ -177,6 +177,9 @@ function restartGame() {
     gameOver = false;
     winner = null;
     confetti = [];
+    // Redefinir a velocidade da bola para o valor inicial
+    ballSpeedX = 8;
+    ballSpeedY = 8;
     resetBall();
     updateScore();
 }
@@ -185,8 +188,9 @@ function restartGame() {
 function resetBall() {
     ballX = canvas.width / 2;
     ballY = canvas.height / 2;
-    ballSpeedX = -ballSpeedX;
-    ballSpeedY = Math.random() * 14 - 7; // Velocidade Y aleatória aumentada
+    // Manter a direção, mas garantir que a magnitude da velocidade não seja alterada
+    ballSpeedX = ballSpeedX > 0 ? -Math.abs(ballSpeedX) : Math.abs(ballSpeedX);
+    ballSpeedY = Math.random() * 14 - 7; // Velocidade Y aleatória
 }
 
 // Função para verificar se alguém ganhou
